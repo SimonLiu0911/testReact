@@ -7,11 +7,12 @@ import { Admin } from './pages/admin/Admin';
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path="/">
           <Route index element={<Login />} />
-          <Route path='admin' element={<Admin />} />
+        </Route>
+        <Route path="/admin" element={<Layout />}>
+          <Route index element={<Admin />} />
         </Route>
       </Routes>
     </div>
